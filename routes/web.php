@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+// semua yang berawalan 'admin', maka jalankan ini
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('/','Admin\DashboardController@index');
+});
