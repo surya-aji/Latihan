@@ -63,7 +63,7 @@
                         @csrf
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="text-input" class="form-control-label">Nama Tugas</label></div>
-                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama_tugas" placeholder="Text" class="form-control" /><small class="form-text text-muted">This is a help text</small></div>
+                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="nama_tugas" value="{{$data_task->nama_tugas}}" placeholder="Text" class="form-control" /><small class="form-text text-muted">This is a help text</small></div>
                             </div>
                             
                             <div class="row form-group">
@@ -72,7 +72,12 @@
                                     <select name="kategori_tugas" id="SLT_kategori_tugas" class="form-control">
 
                                     @foreach($kategori as $data_kategori)
-                                    <option value={{$data_kategori->id}}>{{$data_kategori->nama_kategori}}</option>
+                                    <option value={{$data_kategori->id}}
+                                        @if($data_kategori->id == $data_task->id_kategori)
+                                            selected
+                                        @endif
+                                    
+                                    >{{$data_kategori->nama_kategori}}</option>
                                         
                                     @endforeach()
                                         
@@ -82,7 +87,7 @@
 
                             <div class="row form-group">
                                 <div class="col col-md-3"><label for="text-input" class="form-control-label">Keterangan Tugas</label></div>
-                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="keterangan_tugas" placeholder="Text" class="form-control" /><small class="form-text text-muted">This is a help text</small></div>
+                                <div class="col-12 col-md-9"><input type="text" id="text-input" name="keterangan_tugas" value="{{$data_task->ket_tugas}}" placeholder="Text" class="form-control" /><small class="form-text text-muted">This is a help text</small></div>
                             </div>
                            
                         
@@ -90,8 +95,8 @@
                                 <div class="col col-md-3"><label class="form-control-label">Status Tugas</label></div>
                                 <div class="col col-md-9">
                                     <div class="form-check-inline form-check">
-                                        <label for="inline-radio1" class="form-check-label"> <input type="radio" id="inline-radio1" name="status_tugas" value="0" class="form-check-input" />Masih Berjalan</label>
-                                        <label for="inline-radio2" class="form-check-label"> <input type="radio" id="inline-radio2" name="status_tugas" value="1" class="form-check-input" />Selesai</label>
+                                        <label for="inline-radio1" class="form-check-label"> <input type="radio" id="inline-radio1" name="status_tugas" value="0"{{$data_task->status_tugas==0?'checked':''}} class="form-check-input" />Masih Berjalan</label>
+                                        <label for="inline-radio2" class="form-check-label"> <input type="radio" id="inline-radio2" name="status_tugas" value="1"{{$data_task->status_tugas==1?'checked':''}} class="form-check-input" />Selesai</label>
                                     </div>
                                 </div>
                             </div>

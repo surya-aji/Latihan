@@ -42,8 +42,14 @@
 
                     <div class="col-md-12">
                         <div class="card">
+                        @if(session()->has('success'))
+                            <div class='alert alert-success'>
+                                {{session()->get('success')}}
+                            </div>
+                        @endif
                             <div class="card-header">
                                 <strong class="card-title">{{$pagename}}</strong>
+                                <a href="{{route('task.create')}}" class = 'btn btn-primary pull-right'>Tambah Data</a>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -54,6 +60,9 @@
                                             <th>ID kategori</th>
                                             <th>Keterangan Tugas</th>
                                             <th>Status</th>
+                                            <th>Edit</th>
+                                            <th>Hapus</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -64,7 +73,14 @@
                                             <td>{{$datas->id_kategori}}</td>
                                             <td>{{$datas->ket_tugas}}</td>
                                             <td>{{$datas->status_tugas}}</td>
-                                            
+                                            <td><a href="{{route('task.edit',$datas->id)}}" class="btn btn-warning">Edit</a></td>
+                                            <td>
+                                                <form action="{{route('task.destroy',$datas->id)}}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger" type="submit">Hapus</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
                                          
