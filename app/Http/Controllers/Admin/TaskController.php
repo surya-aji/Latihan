@@ -114,6 +114,6 @@ class TaskController extends Controller
     {
         $data_delete = task::find($id);
         $data_delete->delete();
-        return redirect('admin/task')->with('success','Tugas berhasil Disimpan');
+        return redirect('admin/task')->with('success','Tugas berhasil Di Hapus');
     }
 }
