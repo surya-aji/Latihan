@@ -3,9 +3,10 @@ $(function() {
 
   if($('#datePickerExample').length) {
     var date = new Date();
-    var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-    $('#datePickerExample').datepicker({
-      format: "mm/dd/yyyy",
+    var today = new Date(date.getDate(), date.getMonth(), date.getFullYear());
+    // new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+    $('#datePickerExample').datepicker({ 
+      format: "dd/mm/yyyy",
       todayHighlight: true,
       autoclose: true
     });
