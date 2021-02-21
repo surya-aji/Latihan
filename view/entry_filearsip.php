@@ -136,6 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		</div>
 		</div>
 		</div> -->
+		
 		<div class="card">
 			<div class="card-body">
 				<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" name="formku" action="<?php echo $_SESSION['url'];?>">

@@ -5,14 +5,6 @@
 			<div class="widget-box">
 				<div class="widget-header">
 					<h4 class="widget-title">Report Arsip Digital</h4>
-					<span class="widget-toolbar">
-						<a href="#" data-action="collapse">
-							<i class="ace-icon fa fa-chevron-up"></i>
-						</a>
-						<a href="#" data-action="close">
-							<i class="ace-icon fa fa-times"></i>
-						</a>
-					</span>
 				</div>
 				<div class="card">
 					<div class="card-body">
@@ -26,76 +18,57 @@
 									</div>
 								</div>
 
-								<div class="form-check form-check-flat form-check-primary mt-0">
+								<!-- <div class="form-check form-check-flat form-check-primary mt-0">
 									<label class="form-check-label">
 									<input name="filterNoArsip" type="checkbox" class="form-check-input">
-									</label>
-								</div>
-
-
-								<!-- <div class="col-xs-1 col-sm-1">
-									<label>
-										<input name="filterNoArsip" type="checkbox" class="ace" value="1"/>
-										<span class="lbl"> </span>
 									</label>
 								</div> -->
 
 
-							</div>
-						
-							<label class="tx-14 font-weight-bold mb-0 text-uppercase" for="id-date-range-picker-1">Filter Tanggal</label><span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="Checklist pada tombol yang tersedia untuk mengaktifkan filter ini. Tentukan range Tanggal yang akan di filter." title="Filter Tanggal">?</span>
-							
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-									<div class="input-group input-daterange" id="datePickerExample">
-									<input type="text" class="form-control" name="rangetgl" value="">
-										<div class="input-group-addon"> to </div>
-										<input type="text" class="form-control" name="rangetgl" value="">
-									</div>
-									</div>
-								</div>
-								<div class="form-check form-check-flat form-check-primary mt-0">
-									<label class="form-check-label">
-									<input name="filterTgl" type="checkbox" class="form-check-input">
+								<div class="col-xs-1 col-sm-1">
+									<label>
+										<input name="filterNoArsip" type="checkbox" class="ace" value="1"/>
+										<span class="lbl"> </span>
 									</label>
 								</div>
+
+
 							</div>
+						
+
 
 							
-							
-							<!-- <div class="row">
+							<label class="tx-14 font-weight-bold mb-0 text-uppercase" for="id-date-range-picker-1">Filter Tanggal</label>
+							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 									<div class="input-group date datepicker" id="datePickerExample">
 										<input type="text" class="form-control" name="rangetgl"><span class="input-group-addon"><i data-feather="calendar"></i></span>
 									</div>
-
-									
-									</div>
+														
 								
-									<<div class="form-group">
+									</div>
+<!-- 								
+									<div class="form-group">
 										<span class="input-group-addon">
 											<i class="fa fa-calendar bigger-110"></i>
 										</span>
 										<input class="form-control" type="text" name="rangetgl" id="id-date-range-picker-1" />
 									</div> -->
-								<!-- </div>
-
+								</div>
+<!-- 
 								<div class="form-check form-check-flat form-check-primary mt-0">
 									<label class="form-check-label">
 									<input name="filterTgl" type="checkbox" class="form-check-input">
 									</label>
 								</div> -->
-
-										<!-- <div class="col-xs-1 col-sm-1">
+										<div class="col-xs-1 col-sm-1">
 											<label>
 												<input name="filterTgl" type="checkbox" class="ace" value="1"/>
 												<span class="lbl"> </span>
 											</label>
-										</div>
-										-->
-							<!-- </div> -->
+										</div>	
+							</div>
 
 							<div class="row">
 							<div class="col-sm-6">

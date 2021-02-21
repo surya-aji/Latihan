@@ -21,9 +21,9 @@
 								<div class="col-sm-6">
 									<div class="form-group">
 									<div class="input-group input-daterange" id="datePickerExample">
-									<input type="text" class="form-control" name="rangetgl" value="">
+									<input type="text" class="form-control" name="rangetgl" >
 										<div class="input-group-addon"> to </div>
-										<input type="text" class="form-control" name="rangetgl" value="">
+										<input type="text" class="form-control" name="rangetgl" >
 									</div>
 									</div>
 								</div>

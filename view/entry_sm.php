@@ -387,24 +387,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	<div class="widget-box">
 		<div class="widget-header">
 			<h4 class="widget-title"><?php echo $title;?></h4>
-			<div class="widget-toolbar">
-				<a href="#" data-action="collapse">
-					<i class="ace-icon fa fa-chevron-up"></i>
-				</a>
-				<a href="#" data-action="close">
-					<i class="ace-icon fa fa-times"></i>
-				</a>
-			</div>
 		</div>
-		<div class="widget-body">
-			<div class="widget-main">
+		<div class="card">
+			<div class="card-body">
 				<form class="form-horizontal" role="form" enctype="multipart/form-data" method="GET" name="formku" action="./index.php?op=add_sm">
 					<div class="form-group">
-						<label class="col-sm-2 control-label no-padding-right" for="form-field-mask-1">Jenis Surat *</label>
+						<label class="tx-11 font-weight-bold mb-0 text-uppercase" for="form-field-mask-1">Jenis Surat *</label>
 						<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="Pilih klasifikasi arsip." title="Klasifikasi">?</span>
-						<div class="col-sm-3">
+						<div class="col-sm-6">
 							<input type="hidden" name="op" value="add_sm"/>
-							<select class="form-control" id="form-field-select-3" name="id_klasifikasi" data-placeholder="Pilih Klasifikasi..." required onchange="this.form.submit()" <?php if(isset($_GET['smid'])){ echo 'disabled'; } ?>>
+							<select class="js-example-basic-single w-100" id="form-field-select-3" name="id_klasifikasi" data-placeholder="Pilih Klasifikasi..." required onchange="this.form.submit()" <?php if(isset($_GET['smid'])){ echo 'disabled'; } ?>>
 								<option value="" >Pilih Klasifikasi</option><?php
 								$KlasArsip= $this->model->selectprepare("klasifikasi", $field=null, $params=null, $where=null, "ORDER BY nama ASC");
 								if($KlasArsip->rowCount() >= 1){
@@ -426,9 +418,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 						<form class="form-horizontal" role="form" enctype="multipart/form-data" method="POST" name="formku" action="<?php echo $_SESSION['url'];?>">
 						<div class="space-4"></div>
 						<div class="form-group">
-							<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> No. Agenda *</label>
+							<label class="tx-11 font-weight-bold mb-0 text-uppercase" for="form-field-1"> No. Agenda *</label>
 							<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="Di isi sesuai dengan nomor agenda surat masuk." title="Nomor Agenda">?</span>
-							<div class="col-sm-3"> <?php 
+							<div class="col-sm-6"> <?php 
 								$params = array(':id' => 1);
 								$cek_noagenda_custom = $this->model->selectprepare("pengaturan", $field=null, $params, "id=:id")->fetch(PDO::FETCH_OBJ);
 								if($cek_noagenda_custom->no_agenda_sm != '' && !isset($data_sm->no_agenda)){
@@ -447,9 +439,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 						</div>
 						<div class="space-4"></div>
 						<div class="form-group">
-							<label class="col-sm-2 control-label no-padding-right" for="form-field-mask-1"> Nomor Surat *</label>
+							<label class="tx-11 font-weight-bold mb-0 text-uppercase" for="form-field-mask-1"> Nomor Surat *</label>
 							<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="Di isi sesuai dengan nomor surat masuk yang diterima." title="Nomor Surat Masuk">?</span>
-							<div class="col-sm-4">
+							<div class="col-sm-6">
 								<input class="form-control" placeholder="Nomor surat masuk" type="text" name="nosm" <?php if(isset($nosm)){ echo $nosm; }?> id="form-field-mask-1" required/>
 							</div>
 						</div>
@@ -457,7 +449,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 						<div class="form-group">
 							<label class="col-sm-2 control-label no-padding-right" for="form-field-mask-1"> Tanggal Surat *</label>
 							<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="Di isi sesuai dengan tanggal pada surat masuk. ex. 01-12-2015" title="Tanggal Surat">?</span>
-							<div class="col-sm-3">
+							<div class="col-sm-6">
 								<input class="form-control date-picker" id="id-date-picker-1" data-date-format="dd-mm-yyyy" placeholder="Tanggal pada surat masuk" type="text" name="tglsm" <?php if(isset($tgl_surat)){ echo $tgl_surat; }?> id="form-field-mask-1" required/>
 							</div>
 						</div>
@@ -465,7 +457,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 						<div class="form-group">
 							<label class="col-sm-2 control-label no-padding-right" for="form-field-mask-1"> Tanggal Terima *</label>
 							<span class="help-button" data-rel="popover" data-trigger="hover" data-placement="left" data-content="Di isi sesuai dengan tanggal surat masuk diterima. ex. 01-12-2015" title="Tanggal Terima">?</span>
-							<div class="col-sm-3">
+							<div class="col-sm-6">
 								<input class="form-control date-picker" id="id-date-picker-1" data-date-format="dd-mm-yyyy" placeholder="Tanggal terima surat masuk" type="text" name="tgl_terima" <?php if(isset($tgl_terima)){ echo $tgl_terima; }?> id="form-field-mask-1" required/>
 							</div>
 						</div>

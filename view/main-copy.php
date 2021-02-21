@@ -43,6 +43,9 @@ if(isset($_SESSION['atra_id']) AND isset($_SESSION['atra_pass'])){
 		<!-- <link rel="icon" href="img/core-img/favicon.ico"> -->
 
 		<!-- plugin css -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/assets/fullcalendar/fullcalendar.min.css" />
 		<link href="assets/assets/fonts/feather-font/css/iconfont.css" rel="stylesheet" />
 		<link href="assets/assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />
 		<link href="assets/assets/plugins/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" />
@@ -50,15 +53,23 @@ if(isset($_SESSION['atra_id']) AND isset($_SESSION['atra_pass'])){
 		<link href="assets/assets/plugins/dropify/css/dropify.min.css" rel="stylesheet" />
 		<link href="assets/assets/plugins/select2/select2.min.css" rel="stylesheet" />
 		<link href="assets/assets/plugins/datatables-net/dataTables.bootstrap4.css" rel="stylesheet" />
-		
+
 		<!-- end plugin css -->
 
 		<!-- common css -->
 		<link href="assets/css/app.css" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" />
 		<!-- end common css -->
+		<script src="https://code.highcharts.com/highcharts.src.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+		
+		
 
 	</head>
+
+	
 
 	<body>
 
@@ -82,10 +93,13 @@ if(isset($_SESSION['atra_id']) AND isset($_SESSION['atra_pass'])){
 		<script src="assets/assets/plugins/feather-icons/feather.min.js"></script>
 		<script src="assets/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+		
 
 
 		<!-- plugin script -->
+		<script src="assets/assets/fullcalendar/lib/jquery.min.js"></script>
+		<script	src="assets/assets/fullcalendar/lib/moment.min.js"></script>
+		<script src="assets/assets/fullcalendar/fullcalendar.min.js"></script>
 		<script src="assets/assets/plugins/chartjs/Chart.min.js"></script>
 		<script src="assets/assets/plugins/jquery.flot/jquery.flot.js"></script>
 		<script src="assets/assets/plugins/jquery.flot/jquery.flot.resize.js"></script>
@@ -99,11 +113,15 @@ if(isset($_SESSION['atra_id']) AND isset($_SESSION['atra_pass'])){
 		<script src="assets/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
 		<script src="assets/assets/js/datepicker.js"></script>
  		<script src="assets/assets/js/timepicker.js"></script>
-		 <script src="assets/assets/plugins/select2/select2.min.js"></script>
-		 <script src="assets/assets/js/select2.js"></script>
-		 <script src="assets/assets/plugins/datatables-net/jquery.dataTables.js"></script>
+		<script src="assets/assets/plugins/select2/select2.min.js"></script>
+		<script src="assets/assets/js/select2.js"></script>
+		<script src="assets/assets/plugins/datatables-net/jquery.dataTables.js"></script>
   		<script src="assets/assets/plugins/datatables-net-bs4/dataTables.bootstrap4.js"></script>
-		  <script src="assets/assets/js/data-table.js"></script>
+		<script src="assets/assets/js/data-table.js"></script>
+	
+
+
+		
 		<!-- end plugin script -->
 
 		<!-- common js -->
