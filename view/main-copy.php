@@ -107,16 +107,18 @@ if(isset($_SESSION['atra_id']) AND isset($_SESSION['atra_pass'])){
 		<script src="assets/assets/plugins/apexcharts/apexcharts.min.js"></script>
 		<script src="assets/assets/plugins/progressbar-js/progressbar.min.js"></script>
 		<script src="assets/assets/plugins/dropify/js/dropify.min.js"></script>
+		<script src="assets/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+		<script src="assets/assets/plugins/select2/select2.min.js"></script>
+		<script src="assets/assets/plugins/datatables-net/jquery.dataTables.js"></script>
+  		<script src="assets/assets/plugins/datatables-net-bs4/dataTables.bootstrap4.js"></script>
+
+
 		<script src="assets/assets/js/dropify.js"></script>
 		<script src="assets/assets/js/dashboard.js"></script>
 		<script src="assets/assets/js/datepicker.js"></script>
-		<script src="assets/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-		<script src="assets/assets/js/datepicker.js"></script>
- 		<script src="assets/assets/js/timepicker.js"></script>
-		<script src="assets/assets/plugins/select2/select2.min.js"></script>
+		
+ 		<!-- <script src="assets/assets/js/timepicker.js"></script> -->
 		<script src="assets/assets/js/select2.js"></script>
-		<script src="assets/assets/plugins/datatables-net/jquery.dataTables.js"></script>
-  		<script src="assets/assets/plugins/datatables-net-bs4/dataTables.bootstrap4.js"></script>
 		<script src="assets/assets/js/data-table.js"></script>
 	
 

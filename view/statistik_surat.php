@@ -1,11 +1,13 @@
 <?php
-  include ('db.php');
+  require ('db.php');
 
-$sql = "SELECT COUNT(*) as count FROM agenda 
-WHERE Year(created) GROUP BY Month(created)";
-$viewer = mysqli_query($mysqli,$sql);
-$viewer = mysqli_fetch_all($viewer,MYSQLI_ASSOC);
-$viewer = json_encode(array_column($viewer, 'count'),JSON_NUMERIC_CHECK);
+$connect = new PDO('mysql:host=localhost;dbname=surat', 'root', '');
+$sth = $connect->prepare("SELECT count(*) as total  from arsip_sm WHERE id_user = '1' GROUP BY DATE(created)");
+$sth->execute();
+    $json = [(int)$sth->fetchColumn()];
+
+// echo json_encode($json);
+// echo json_encode($sth->fetchColumn());
 
 
 ?>
@@ -13,8 +15,14 @@ $viewer = json_encode(array_column($viewer, 'count'),JSON_NUMERIC_CHECK);
 <div id="container"></div>
 
 <script type="text/javascript">
-  var data_viewer = <?php echo $viewer; ?>;
+    var data = <?php echo json_encode($json);?>
+    
+
+    
   Highcharts.chart('container', {
+    chart: {
+            type: 'column'
+        },
       title: {
           text: 'STATISTIK PEREDARAN SURAT'
       },
@@ -22,7 +30,7 @@ $viewer = json_encode(array_column($viewer, 'count'),JSON_NUMERIC_CHECK);
           text: ''
       },
       xAxis: {
-          categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December']
+        categories: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
       },
       yAxis: {
           title: {
@@ -41,7 +49,8 @@ $viewer = json_encode(array_column($viewer, 'count'),JSON_NUMERIC_CHECK);
       },
       series: [{
           name: 'Jumlah Surat',
-          data: [21,30,20,80,80,90,1] 
+          
+          data: data
       }],
       responsive: {
           rules: [{

@@ -6,12 +6,25 @@ $(function() {
     var today = new Date(date.getDate(), date.getMonth(), date.getFullYear());
     // new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
     $('#datePickerExample').datepicker({ 
-      format: "dd/mm/yyyy",
+      dateFormat:"dd-mm-yy",
       todayHighlight: true,
       autoclose: true
     });
     $('#datePickerExample').datepicker('setDate', today);
   }
+  if($('#datePickerExample2').length) {
+    var date = new Date();
+    var today = new Date(date.getDate(), date.getMonth(), date.getFullYear());
+    // new Date(date.getFullYear(), date.getMonth(), date.getDate()); 
+    $('#datePickerExample2').datepicker({ 
+      format: "dd/mm/yyyy",
+      todayHighlight: true,
+      autoclose: true
+    });
+    $('#datePickerExample2').datepicker('setDate', today);
+  }
+
+  
 
   if($('#tgl_awal').length) {
     var date = new Date();
@@ -37,3 +50,5 @@ $(function() {
   }
   
 });
+
+

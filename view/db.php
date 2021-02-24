@@ -9,4 +9,5 @@ $mysqli = new PDO('mysql:host=localhost;dbname=surat', 'root', '');;
 if($mysqli->connect_error){
 	trigger_error('Koneksi ke database gagal: ' . $mysqli->connect_error, E_USER_ERROR);	
 }
+
 ?>
