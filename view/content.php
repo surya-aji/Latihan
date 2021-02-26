@@ -106,6 +106,8 @@
                             require_once "tracking_.php";
                 }elseif(isset($_GET['op']) AND $_GET['op'] == "statistik"){
                             require_once "statistik_surat.php";
+                 }elseif(isset($_GET['op']) AND $_GET['op'] == "statistik_unit"){
+                            require_once "statistik_unit.php";
                 }elseif(isset($_GET['op']) AND $_GET['op'] == "pekanan"){
                             require_once "libur_pekanan.php";
                 }elseif(isset($_GET['op']) AND $_GET['op'] == "add_pekanan"){

@@ -317,7 +317,7 @@
              <a href="./index.php?op=statistik" class="nav-link {{ active_class(['statistik/inbox']) }}">Statistik Peredaran Surat</a>
             </li>
             <li class="nav-item">
-              <a href="{{ url('/statistik/read') }}" class="nav-link {{ active_class(['statistik/read']) }}">Daftar Nomer Pesanan</a>
+              <a href="./index.php?op=statistik_unit" class="nav-link {{ active_class(['statistik/read']) }}">Statistik Unit</a>
             </li>
           </ul>
         </div>
